@@ -2,7 +2,7 @@ package day1;
 
 import java.util.Scanner;
 
-public class Task1 {
+class Task1 {
 
     public static void main(String[] args) {
         int answer = new Task1().solve("/day1/input.txt");
@@ -20,7 +20,7 @@ public class Task1 {
         }
     }
 
-    private int fuelRequirement(int mass) {
+    int fuelRequirement(int mass) {
         return mass / 3 - 2;
     }
 }

@@ -2,15 +2,14 @@ package day1;
 
 import java.util.Scanner;
 
-public class Task2 {
+class Task2 {
 
     public static void main(String[] args) {
-        int answer = solve("/day1/input.txt");
-        System.out.println(answer);
+        System.out.println(new Task2().solve("/day1/input.txt"));
     }
 
-    private static int solve(String inputPath) {
-        try (Scanner scanner = new Scanner(Task2.class.getResourceAsStream(inputPath))) {
+    private int solve(String inputPath) {
+        try (Scanner scanner = new Scanner(getClass().getResourceAsStream(inputPath))) {
             int total = 0;
             while (scanner.hasNextInt()) {
                 int mass = scanner.nextInt();
@@ -20,7 +19,7 @@ public class Task2 {
         }
     }
 
-    private static int fuelRequirement(int moduleMass) {
+    int fuelRequirement(int moduleMass) {
         int sum = 0;
         int mass = moduleMass;
         int fuel;
